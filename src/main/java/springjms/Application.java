@@ -8,7 +8,8 @@ import org.apache.activemq.broker.BrokerService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Application {		
-	public static void main(String[] args) throws URISyntaxException, Exception{
+	
+		public static void main(String[] args) throws URISyntaxException, Exception{
 				
 		BrokerService broker = BrokerFactory.createBroker(new URI("broker:(tcp://localhost:61616)"));
 		broker.start();
