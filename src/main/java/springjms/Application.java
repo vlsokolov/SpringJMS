@@ -19,7 +19,8 @@ public class Application {
 			JmsProducer jmsProducer = context.getBean(JmsProducer.class);
 			JmsReceiver jmsReceiver = context.getBean(JmsReceiver.class);
 						
-			jmsProducer.sendMessage("Fisrt JMS message");
+		//	jmsProducer.sendMessage("Fisrt JMS message");
+			jmsProducer.sendMessage(new Person("Will", "Smith"));
 			System.out.println("Received message: " + jmsReceiver.receiveMessage());			
 		} finally {
 			broker.stop();
